@@ -10,6 +10,8 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         api: __DIR__.'/../routes/api.php',
         health: '/up',
+        //require_once: __DIR__ . '/vendor/autoload.php',
+
     )
     ->withMiddleware(function (Middleware $middleware) {
         //

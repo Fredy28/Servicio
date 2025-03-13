@@ -16,12 +16,12 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        // Obtenemos las credenciales (nombre y contraseña)
+        //Estas son las credenciales para el user y el passw
         $credentials = $request->only(['name', 'password']);
         
-        // Intentamos autenticar al usuario
+        //Autenticamos el user
         if (Auth::attempt($credentials)) {
-            // Si la autenticación es exitosa, obtenemos el usuario autenticado
+            //Si el usuario ya está autenticado
             $user = Auth::user();
             
             // Devolvemos la respuesta con el usuario
